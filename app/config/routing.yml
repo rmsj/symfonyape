@@ -1,0 +1,4 @@
+ape_cart:
+    resource: "@ApeCartBundle/Resources/config/routing.yml"
+    prefix:   /
+
