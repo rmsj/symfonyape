@@ -3,6 +3,8 @@
 namespace Ape\CartBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Ape\CartBundle\Entity\Cart;
+use Ape\CartBundle\Entity\Product;
 
 /**
  * CartItems
@@ -28,12 +30,13 @@ class CartItems
      */
 
     /**
-     * @ManyToOne(targetEntity="Product")
-     * @JoinColumn(name="product_id", referencedColumnName="id")
+     * @ORM\OneToOne(targetEntity="Product")
+     * @ORM\JoinColumn(name="product_id", referencedColumnName="id")
      **/
     private $product;
 
     /**
+     *
      * @ORM\ManyToOne(targetEntity="Cart", inversedBy="items")
      * @ORM\JoinColumn(name="cart_id", referencedColumnName="id")
      */

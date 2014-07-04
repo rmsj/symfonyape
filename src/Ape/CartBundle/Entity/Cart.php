@@ -3,6 +3,7 @@
 namespace Ape\CartBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Ape\CartBundle\Entity\CartItems;
 
 /**
  * Cart
